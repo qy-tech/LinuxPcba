@@ -1,0 +1,4 @@
+# /etc/udev/rules.d/60-automount.rules
+# auto check usb storage insert, and check it content pcba test python file.
+ 
+ACTION=="add",KERNEL=="sd[a-z]*", RUN+="/usr/local/bin/init.sh %k"
