@@ -241,7 +241,7 @@ class GUITest:
         测试声卡是否正常，分为录音和放音功能
         """
         logging.debug('test sound')
-        # self.create_test_case_button(const.SOUND_RECORD, 0, 2)
+        self.create_test_case_button(const.SOUND_RECORD, 0, 2)
         self.create_test_case_button(const.SOUND_PLAY, 1, 2)
 
     def test_nfc(self):
