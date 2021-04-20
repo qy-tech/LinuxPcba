@@ -201,7 +201,7 @@ class GUITest:
         """
         logging.debug('test wifi bt')
         self.create_test_case_button(const.WIFI, 0, 2)
-        # self.create_test_case_button(const.BLUETOOTH, 1, 2)
+        self.create_test_case_button(const.BLUETOOTH, 1, 2)
         self.create_test_case_button(const.USB_NETWORK, 2, 2)
 
     def test_rtc(self):
@@ -267,15 +267,15 @@ class GUITest:
         try:
             ledR = self.configOptions.config[const.TEST_CASE_PATH][const.LED_R]
         except KeyError as _:
-            ledR = "32"
+            ledR = "33"
         try:
             ledG = self.configOptions.config[const.TEST_CASE_PATH][const.LED_G]
         except KeyError as _:
-            ledG = "33"
+            ledG = "45"
         try:
             ledB = self.configOptions.config[const.TEST_CASE_PATH][const.LED_B]
         except KeyError as _:
-            ledB = "45"
+            ledB = "32"
         Utils.check_and_create_gpio(ledR)
         Utils.check_and_create_gpio(ledG)
         Utils.check_and_create_gpio(ledB)
