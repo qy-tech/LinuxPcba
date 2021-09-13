@@ -1,5 +1,5 @@
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# !/usr/bin/env python
 import logging
 import os
 import subprocess
@@ -67,9 +67,9 @@ def commands(item, path):
         # 'arecord -f cd -d 10 /tmp/audio.wav',
         const.NFC: get_real_path('bin/test_nfc'),
         const.CAMERA: 'cheese',
-        const.LED_R: 'echo 1 > /sys/class/gpio/gpio{0}/value; sleep 1; echo 0 > /sys/class/gpio/gpio{0}/value',
-        const.LED_G: 'echo 1 > /sys/class/gpio/gpio{0}/value; sleep 1; echo 0 > /sys/class/gpio/gpio{0}/value',
-        const.LED_B: 'echo 1 > /sys/class/gpio/gpio{0}/value; sleep 1; echo 0 > /sys/class/gpio/gpio{0}/value',
+        const.LED_R: '{}',
+        const.LED_G: '{}',
+        const.LED_B: '{}',
         const.HUMIDITY: 'cat {}',
         const.TEMPERATURE: 'cat {}',
         const.PRESSURE: 'cat {}',

@@ -1,5 +1,5 @@
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# !/usr/bin/env python
 
 import os
 from functools import partial
@@ -264,21 +264,21 @@ class GUITest:
         测试 RGB 灯是否正常，首先判断节点是否存在，如果不存在就创建对应的节点
         """
         logging.debug('test_rgb')
-        try:
-            ledR = self.configOptions.config[const.TEST_CASE_PATH][const.LED_R]
-        except KeyError as _:
-            ledR = "33"
-        try:
-            ledG = self.configOptions.config[const.TEST_CASE_PATH][const.LED_G]
-        except KeyError as _:
-            ledG = "45"
-        try:
-            ledB = self.configOptions.config[const.TEST_CASE_PATH][const.LED_B]
-        except KeyError as _:
-            ledB = "32"
-        Utils.check_and_create_gpio(ledR)
-        Utils.check_and_create_gpio(ledG)
-        Utils.check_and_create_gpio(ledB)
+        # try:
+        #     ledR = self.configOptions.config[const.TEST_CASE_PATH][const.LED_R]
+        # except KeyError as _:
+        #     ledR = "33"
+        # try:
+        #     ledG = self.configOptions.config[const.TEST_CASE_PATH][const.LED_G]
+        # except KeyError as _:
+        #     ledG = "45"
+        # try:
+        #     ledB = self.configOptions.config[const.TEST_CASE_PATH][const.LED_B]
+        # except KeyError as _:
+        #     ledB = "32"
+        # Utils.check_and_create_gpio(ledR)
+        # Utils.check_and_create_gpio(ledG)
+        # Utils.check_and_create_gpio(ledB)
 
         self.create_test_case_button(const.LED_R, 0, 2)
         self.create_test_case_button(const.LED_G, 1, 2)
