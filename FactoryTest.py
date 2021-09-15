@@ -179,9 +179,9 @@ class GUITest:
         logging.debug('test case path {}'.format(path))
         result, message = Utils.run_shell_command(Utils.commands(item, path))
         switchAutoCheck = {
-            const.WIFI: 'inet addr' in message,
+            const.WIFI: message.strip(),
             const.BLUETOOTH: 'hci' in message,
-            const.USB_NETWORK: 'inet addr' in message,
+            const.USB_NETWORK: message.strip(),
             const.NFC: 'success' in message,
             const.HUMIDITY: message.strip(),
             const.TEMPERATURE: message.strip(),
